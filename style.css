@@ -1,0 +1,905 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  scroll-behavior: smooth;
+    
+}
+
+
+
+body {
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.5) 50%
+    ),
+    url(./images/vecteezy_city-view-landscape-view-vector-design-illustration_7984532.jpg);
+ /* يمنع التمرير العمودي */
+  overflow-x: hidden;  
+  width: 100vw; /* يجعل العرض يساوي عرض الشاشة */
+  font-family: 'Poppins', sans-serif;
+background-repeat:repeat-y;
+}
+.main {
+
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.5) 50%,
+      rgba(0, 0, 0, 0.5) 50%
+    ),
+    url(./images/vecteezy_city-view-landscape-view-vector-design-illustration_7984532.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: cover;
+   height: 109vh; 
+
+}
+.navbar {
+  width: 1200px;
+  height: 75px;
+  margin: auto;
+  position: fixed;
+
+}
+
+
+.logo {
+ cursor: pointer;
+  color: #bf00ff; /* بنفسجي نيون */
+  text-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff, 0 0 30px #bf00ff,
+    0 0 40px #a000e0, 0 0 50px #9000d0, 0 0 60px #8000c0; /* تأثير تدرّج للإضاءة */
+  font-weight: bold; /* يجعل الشعار أكثر وضوحًا */
+  font-size: 50px;/* يمكنك تغيير الحجم حسب الحاجة */
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: 2px;/* تباعد الأحرف لإحساس أكثر حداثة */
+  padding-top:20px;
+  padding-left: 50px;
+  float: left;
+  animation: glow 1.5s infinite alternate;
+ 
+
+}
+
+/* تأثير وميض الشعار */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff, 0 0 30px #bf00ff,
+      0 0 40px #a000e0, 0 0 50px #9000d0, 0 0 60px #8000c0;
+  }
+  100% {
+    text-shadow: 0 0 20px #bf00ff, 0 0 30px #bf00ff, 0 0 40px #a000e0,
+      0 0 50px #9000d0, 0 0 60px #8000c0, 0 0 70px #7000b0;
+  }
+}
+.logo:hover {
+  transform: scale(1, 1);
+}
+.icon {
+  display: flex;
+  align-items: center; /* يجعل الصورة والنص في نفس الخط */
+  /* gap: 10px; يضيف مسافة بين الصورة والنص */
+}
+
+
+.home-img img {
+    border-radius: 50%; /* يجعل الصورة دائرية */
+
+  width: 300px; /* حجم الصورة */
+  height: 300px;
+  object-fit: cover; /* يمنع التشوه */
+  border: 3px solid #bf00ff; /* لون الإطار */
+  box-shadow: 0 0 10px #bf00ff, 0 0 20px #bf00ff, 0 0 30px #a000e0,
+    0 0 40px #9000d0; /* تأثير الوهج */
+  animation: glow 1.5s infinite alternate;
+  margin-left: -20px; /* حركيها لليسار بتعديل هذه القيمة */
+  margin-top: 30px;
+  /* تغيير شكل الماوس */
+  cursor: pointer;
+ 
+}
+
+
+.menu {
+  width: 700px;
+  float: left;
+  height: 80px;
+}
+ul {
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li {
+  list-style: none;
+  margin-left: 20px;
+  margin-top: 25px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-family: Arial, sans-serif; /* تصحيح اسم الخط */
+  font-weight: bold;
+  font-size: 16px;
+  display: inline-block; /* يجعل العنصر يعمل بشكل صحيح مع transition */
+  padding: 10px 15px; /* تحسين المساحة حول النص */
+  transition: color 0.4s ease-in-out, text-shadow 0.4s ease-in-out;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+}
+
+/* تأثير عند تمرير الماوس */
+ul li a:hover {
+  color: #bf00ff; /* لون بنفسجي نيون عند التحويل */
+  text-shadow: 0 0 5px #bf00ff, 0 0 10px #bf00ff;
+  border-bottom:3px solid #9000d0;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home-content{
+    display: flex;
+    align-items: flex-start; /* يجعل النص يتجه لليمين */
+    flex-direction: column;
+    align-items: baseline;
+  text-align:left;
+  justify-content:center;
+    margin-top: -18rem;
+    margin-left: 300px; /* تحريك النص لليمين أكثر */
+    
+}
+.home-content p{
+  cursor:context-menu;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.8;
+  max-width: 1000px;
+  align-items: flex-start; 
+  color: #f0edeb;
+  
+}
+.home.home-content h1{
+
+
+    font-size: 7rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    line-height: 1;
+    color: #f0edeb;
+}
+.home-content h1{
+  cursor:context-menu;
+
+  color: #f0edeb;
+}
+span{
+    
+    /* color: hsl(316, 65%, 32%) ; */
+   /* color: hwb(334 30% 14%) ;  */
+    color:  #bf00ff;
+   
+}
+
+.home-content h3{
+  cursor:context-menu;
+
+  margin-bottom: 2rem;
+    font-size: 3.5rem;
+    margin-top: 1rem;
+    font-weight: 700; 
+    color:#f0edeb;
+    
+    
+}
+.social-icons a{
+
+  display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color:transparent ;
+    border: 2px solid #9000d0;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin:3rem 1.5rem 3rem 0;
+    transition: 0.3s ease-in-out;
+    color: black;
+   
+  
+
+}
+.social-icons a:hover{
+  color: black;
+  transform: scale(1.3)translateY(-5px);  
+  background-color: #8000c0;
+  box-shadow:0 0 5px #9000d0;
+}
+.btn{
+    display: inline-block;
+    padding:1rem 2.8rem ;
+    background-color:#9000d0;
+    border-radius: 4rem;
+    font-size:1rem ;
+    color: #fff;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    border: 2px solid #8000c0;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+   
+  
+}
+.btn:hover{
+    transform:scale3d(1.03);
+    background-color: #8000c0;
+    color: black;
+    box-shadow: 0 0 25px #9000d0; 
+  
+}
+.typing-text{
+    font-size: 34px;
+    font-weight: 600px;
+    min-width: 200px;
+    /* the new addion */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+   
+}
+.typing-text span{
+    position: relative;
+  
+}
+.typing-text span::before{
+    content: "Developer & Designer";
+    position: relative;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid    #bf00ff ;
+    
+
+    animation: cursor 0.6s steps(2) infinite alternate, words 6s infinite;
+}
+@keyframes cursor{
+    to{
+        border-left: 2px solid    #bf00ff;
+    }
+
+}
+@keyframes words {
+   0%, 
+    20%{
+        content:"Developer & Designer";
+       }
+       21%, 
+       40%{
+       content:"Video Editor";
+    }
+       41% ,
+       60%{
+        content:"Software Engineer";
+       }
+       61% ,
+       80%{
+        content:"UI/UX Desinger";
+       }
+       81%,
+       100%{
+        content: "Front-end Developer";
+       }
+
+
+}
+@media(max-width: 1000px){
+    .home{
+        gap:4rem;
+
+    }
+}
+@media(max-width:995px){
+    .home{
+        flex-direction: column ;
+        margin:5rem 4rem;
+    }
+}
+.home .home-content h3{
+  font-size: 2.5rem;  
+  
+}
+.home-content h1{
+    font-size: 5rem;
+    
+}
+.heading{
+  font-size: 5rem;
+  text-align:center;
+    margin: 5rem 0;
+    cursor: pointer;
+  
+}
+.certification{
+color: white;
+  padding: 100px 15px;
+  
+
+
+}
+.certification h2{
+  margin-bottom: 5rem;
+}
+.timeline-items{
+  max-width:1200px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.timeline-items::before{
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 100%;
+  background-color:#bf00ff;
+  left:calc(50% - 1px);
+}
+.timeline-item{
+  margin-bottom: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.timeline-item:last-child{
+  margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+  padding-right: calc(50% + 30px);
+  text-align: right;
+}
+.timeline-item:nth-child(even){
+  padding-left: calc(50% + 30px);
+}
+.timeline-dote{
+  height: 21px;
+  width: 21px;
+  background-color: #bf00ff; /* لون بنفسجي نيون عند التحويل */
+  box-shadow: 0 0 25px #bf00ff,
+              0 0 50px #bf00ff;
+  position: absolute;
+  left: calc(50% - 8px);
+  border-radius: 50%;
+  
+  top:10px;
+
+}
+.timeline-date{
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  margin: 6px 0 15px;
+}
+.timeline-content{
+  background-color: #a000e0;
+  border: 3px solid #bf00ff;
+  padding: 30px 50px;
+  border-radius: 4rem;
+  box-shadow:0 0 10px #bf00ff ;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+.timeline-content:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #bf00ff;
+
+}
+
+.timeline-content h3{
+  font-size: 20px;
+  color: white;
+  margin: 0 0 10px;
+  font-weight: 500;
+}
+.timeline-content p{
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+
+}
+::-webkit-scrollbar{
+  width: 15px;
+
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: #bf00ff;
+}
+::-webkit-scrollbar-track{
+  background-color: #220f29;
+  width: 50px;
+}
+.services h2{
+  margin-bottom: 5rem;
+  color: white;
+}
+.services-container{
+  display: grid;
+  grid-template-columns:repeat(2,1fr);
+  align-items: center;
+  gap:2.5rem;
+}
+.services-box{
+  background-color: #bf00ff;
+  border-radius: 3rem;
+  height: auto;
+  min-height: 300px;
+  border:5px solid transparent;
+  cursor: pointer ;
+  transition: 0.4s ease-in-out;
+  padding: 2rem;
+}
+.services-box:hover{
+ 
+    background-color:#f0eaea;
+    color: black;
+    box-shadow: 0 0 25px #a000e0; 
+   transform:scale(1.03);
+   border: 5px solid #bf00ff;
+    
+}
+.services-box .services-info{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+ 
+  align-items: flex-start;
+ 
+  padding: 2rem;
+justify-content: left;
+}
+.services-info h4{
+ 
+  font-size: 2.5rem;
+  font-weight: 800;
+ 
+  line-height: 1.5;
+}
+.services-info p{
+  
+  font-size: 1.4rem;
+  font-weight: 600;
+  max-height: 100px;
+  
+  line-height: 1.5;
+  
+  margin-top: 1rem;
+
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 109vh; 
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#form {
+  display: grid;
+  place-items: center;
+  width: 500px; /* جعل النموذج أعرض */
+  height: auto;
+  padding: 25px;
+  background-color: #161616;
+  box-shadow: 0px 15px 60px #a020f0 ;
+  outline: 1px solid #a020f0;
+  border-radius: 10px;
+}
+
+#form-body {
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  margin: auto;
+}
+
+#welcome-lines {
+  text-align: center;
+  line-height: 1;
+}
+
+#welcome-line-1 {
+  color: #a020f0;
+  font-weight: 600;
+  font-size: 40px;
+}
+
+#welcome-line-2 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-top: 17px;
+}
+
+#input-area {
+  margin-top: 40px;
+}
+
+.form-inp {
+  display: flex;
+  align-items: center;
+  padding: 11px 15px;
+  background: transparent;
+  border: 1px solid #e3e3e3;
+  line-height: 1;
+  border-radius: 8px;
+  transition: border 0.3s ease-in-out;
+}
+
+.form-inp input,
+.form-inp textarea {
+  width: 100%;
+  background: none;
+  font-size: 14px;
+  color: #a020f0;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.form-inp:focus-within {
+  border: 1px solid #a020f0;
+}
+
+#submit-button-cvr {
+  margin-top: 20px;
+}
+
+#submit-button {
+  display: block;
+  width: 100%;
+  color: #a020f0;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0;
+  padding: 14px 13px 12px 13px;
+  border: 0;
+  outline: 1px solid #a020f0;
+  border-radius: 8px;
+  line-height: 1;
+  cursor: pointer;
+  transition: all ease-in-out .3s;
+}
+
+#submit-button:hover {
+  background-color: #a020f0;
+  color: #161616;
+}
+
+#forgot-pass {
+  text-align: center;
+  margin-top: 10px;
+}
+
+#forgot-pass a {
+  color: #868686;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#bar {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  width: 28px;
+  height: 8px;
+  margin-left: -33px;
+  background-color: #a020f0;
+  border-radius: 10px;
+}
+
+#bar:before,
+#bar:after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #ececec;
+  border-radius: 50%;
+}
+
+#bar:before {
+  right: -20px;
+}
+
+#bar:after {
+  right: -38px;
+}
+/* for skells */
+
+.skills {
+  text-align: center;
+  padding: 50px 20px;
+  /* background-color: #1a1a2e; */
+  color: white;
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.skill h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  height: 20px;
+  background-color: #333;
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* شريط التقدم قبل التحفيز */
+.progress {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #8000ff, #d900ff);
+  border-radius: 10px;
+  transition: width 2s ease-in-out;
+}
+
+/* ظهور علامة الصح بعد الامتلاء */
+.checkmark {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  font-size: 1.5rem;
+  transition: transform 0.5s ease-in-out 2s;
+}
+
+/* عندما يضع المستخدم المؤشر على شريط التقدم يبدأ الامتلاء */
+.progress-bar:hover .progress {
+  width: calc(var(--width) * 1%);
+}
+
+.progress-bar:hover .checkmark {
+  transform: translateY(-50%) scale(1);
+}
+/* for about me */
+.about {
+  text-align: center;
+  padding: 50px 20px;
+  /* background-color: #1a1a2e; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* جعل الصفحة في المنتصف */
+}
+
+.heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.heading span {
+  color: #a000e0;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.about-img img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #a000e0;
+  box-shadow: 0 0 15px #a000e0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.about-img img:hover {
+  transform: scale(1.1);
+}
+
+.about-content {
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+.about-content h3 {
+  font-size: 2rem;
+  color: #a000e0;
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+/* .quick-facts {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.quick-facts li {
+  font-size: 1.1rem;
+  margin: 5px 0;
+} */
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  background: #a000e0;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease-in-out;
+  margin-top: 15px;
+}
+
+.btn:hover {
+  background: #8000ff;
+}
+.quick-facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* تقسيم إلى عمودين */
+  gap: 10px; /* المسافة بين العناصر */
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 600px; /* لجعلها بمقاس مناسب */
+}
+
+.quick-facts li {
+  font-size: 1.1rem;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1); /* تأثير جميل للخلفية */
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.quick-facts li:hover {
+
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* for projects */
+.projects {
+  text-align: center;
+  padding: 50px 0;
+  color: white;
+  /* background: linear-gradient(135deg, #1a1a2e, #16213e); 🌌 خلفية جديدة */
+}
+
+  .projects h2{
+    margin-bottom: 5rem;
+  }
+
+.projects-container {
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  background: rgba(44, 44, 44, 0.8); /*لون داكن مع شفافية */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-in-out;
+}
+
+
+/* ✨ تأثير النيوني */
+.project-card::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ff00ff);
+  filter: blur(10px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.project-card:hover::before {
+  opacity: 1;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.project-card h3 {
+  margin: 15px 0;
+  color: #fff;
+  font-size: 20px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.project-card p {
+  color: #ccc;
+}
+
+/* 🌟 زر مع تأثيرات جميلة */
+.project-card .btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #8a2be2;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #8a2be2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card .btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #8a2be2;
+}
+
+/* 💡 تأثير الارتفاع عند التحويم */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(138, 43, 226, 0.8);
+}
+
+/* 🌀 أنيميشن الظهور */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
